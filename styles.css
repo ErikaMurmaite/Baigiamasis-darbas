@@ -1,0 +1,174 @@
+.roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#nav {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(194, 74, 138);
+    gap: 100px;
+    font-family: "Roboto", sans-serif;
+    list-style-type: none;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding-top: 20px;
+    padding-bottom: 20px; 
+    cursor: pointer;
+    padding-right: 200px;
+}
+
+#nav li a {
+    color:rgb(245, 220, 234);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#nav li a:hover { 
+    text-decoration: underline;
+    color: rgb(146, 14, 87);
+}
+
+.hamburger-menu {
+    display: none; /* Slėpti dideliuose ekranuose */
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(245, 220, 234);
+}
+
+#main-content { 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px; 
+    padding: 0;
+    background-color: rgb(245, 220, 234);
+    color: rgb(185, 45, 120);
+    width: 100%;
+    margin: 0;
+    align-items: center;
+}
+
+.photo1 img, .photo2 img { 
+    width: 100%; 
+    height: 100%; 
+}
+
+#footer{
+    background-color:rgb(194, 74, 138);
+    font: "Roboto",sans-serif;
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    position: relative; 
+    color:rgb(245, 220, 234);
+}
+
+#header1 {
+    font-family: "Roboto", serif;
+    font-size: 100px;
+    text-align: center;
+    margin-top: 100px;
+    background-color: rgb(245, 220, 234);
+    display: block;
+    width: 100%;
+    animation: fadeInOut 7s infinite;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;  
+    }
+    80% {
+        opacity: 1;
+    }
+    100%{
+        opacity: 0; 
+    }
+}
+
+#colorChangeBtn a {
+    color: rgb(245, 220, 234);
+    text-decoration:none;
+}
+
+#colorChangeBtn {
+    background-color: rgb(194, 74, 138);
+    color: rgb(245, 220, 234);
+    font-family: "Roboto", sans-serif;
+    border: none;
+    padding: 20px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 10px;
+    outline: none;
+}
+
+.centered-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+}
+
+#colorChangeBtn:active, #colorChangeBtn:focus {
+    color: rgb(245, 220, 234) !important;
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    #nav {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        gap: 20px;
+    }
+
+    #nav li a {
+        font-size: 18px;
+    }
+
+    #nav.hidden {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block; /* Rodyti hamburger ikoną */
+        background-color: rgb(194, 74, 138);
+    }
+
+    #main-content {
+        grid-template-columns: 1fr; /* Viena stulpelio struktūra */
+    }
+
+    #header1 {
+        font-size: 60px; 
+    }
+
+    #colorChangeBtn {
+        font-size: 16px; 
+        padding: 15px 20px;
+    }
+
+    .photo1 img, .photo2 img { 
+        width: 100%; 
+        max-width: 500px; 
+        height: auto;
+    }
+
+
+}
